@@ -13,3 +13,9 @@ describe('Check console.log', () => {
     expect(console.log.mock.calls.length).toBe(2);
   });
 });
+
+describe('Check return type of sum: ', () => {
+  test('Should work for expected args: ', () => {
+    expect(sum()).toBe(undefined);
+  });
+});
