@@ -12,6 +12,13 @@ describe('Check console.log', () => {
     sum();
     expect(console.log.mock.calls.length).toBe(2);
   });
+
+  test('console should be called with the sum 4: ', () => {
+    global.console.log = jest.fn();
+    global.process.argv = ['abc', 'xyz', -1, 2, 3];
+    sum();
+    expect(console.log).toHaveBeenCalledWith(4);
+  });
 });
 
 describe('Check return type of sum: ', () => {
