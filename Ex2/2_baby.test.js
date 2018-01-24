@@ -7,4 +7,9 @@ describe('Check console.log', () => {
     sum();
     expect(console.log).toHaveBeenCalledWith(6);
   });
+
+  test('Should be called twice: ', () => {
+    sum();
+    expect(console.log.mock.calls.length).toBe(2);
+  });
 });
