@@ -9,3 +9,9 @@ describe('Argument Validation: ', () => {
     expect(calcNewLine(undefined)).toBe(undefined);
   });
 });
+
+describe('Test functionality of calcNewLine: ', () => {
+  test('Should work for a file with two new lines: ', () => {
+    expect(calcNewLine('./Ex3/test1.txt')).toBe(2);
+  });
+});
