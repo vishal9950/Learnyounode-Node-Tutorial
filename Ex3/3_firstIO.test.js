@@ -18,4 +18,8 @@ describe('Test functionality of calcNewLine: ', () => {
   test('Should work for a file with no lines: ', () => {
     expect(calcNewLine('./Ex3/test2.txt')).toBe(0);
   });
+
+  test('Should not work for \n instead of return: ', () => {
+    expect(calcNewLine('./Ex3/test3.txt')).toBe(1);
+  });
 });
