@@ -15,3 +15,9 @@ describe('Path Validation: ', () => {
     expect(filtered('./Exx4/')).toBe(false);
   });
 });
+
+describe('Funcitonality if filtered: ', () => {
+  test('Should work for correct path: ', () => {
+    expect(filtered('./Ex4', '.txt')).toBe(true);
+  });
+});
