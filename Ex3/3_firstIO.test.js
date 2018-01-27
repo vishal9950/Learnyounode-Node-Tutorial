@@ -23,3 +23,9 @@ describe('Test functionality of calcNewLine: ', () => {
     expect(calcNewLine('./Ex3/test3.txt')).toBe(1);
   });
 });
+
+describe('Test for file existence: ', () => {
+  test('Should emit error if file not found in path specified: ', () => {
+    expect(calcNewLine('./Ex3/test4.txt')).toBe(false);
+  });
+});
