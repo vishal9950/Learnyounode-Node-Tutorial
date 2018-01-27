@@ -9,3 +9,9 @@ describe('Arguments Validation: ', () => {
     expect(filtered(undefined)).toBe(false);
   });
 });
+
+describe('Path Validation: ', () => {
+  test('Should not work for the given path: ', () => {
+    expect(filtered('./Exx4/')).toBe(false);
+  });
+});
