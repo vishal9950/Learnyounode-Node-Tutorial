@@ -28,4 +28,7 @@ const calcNewLine = (filePath) => {
   return str.length - 1;
 };
 
+const pathToFile = process.argv[2];
+console.log(calcNewLine(pathToFile));
+
 module.exports = calcNewLine;
