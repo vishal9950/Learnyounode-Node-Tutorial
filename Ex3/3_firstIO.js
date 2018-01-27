@@ -11,7 +11,7 @@ const pathExists = path => fileSys.existsSync(path, (exists) => {
 const validateInput = (input) => {
   if ((input === null) || (input === undefined)) {
     console.log(`Err1: ${input} argument supplied`);
-    return false;
+    return input;
   }
   return true;
 };

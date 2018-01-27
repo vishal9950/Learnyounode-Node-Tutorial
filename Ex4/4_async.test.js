@@ -9,3 +9,9 @@ describe('Arguments Validation: ', () => {
     expect(calcNewLines(undefined)).toBe(false);
   });
 });
+
+describe('Path Validation: ', () => {
+  test('Should not work if path to file does not exist: ', () => {
+    expect(calcNewLines('./Ex4/test.txt')).toBe(false);
+  });
+});
