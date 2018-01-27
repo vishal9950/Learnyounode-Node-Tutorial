@@ -1,6 +1,6 @@
 const validateInput = (input) => {
-  if (input === null) {
-    console.log('Err1: null arg supplied!');
+  if ((input === null) || (input === undefined)) {
+    console.log(`Err1: ${input} arg supplied!`);
     return false;
   }
   return true;
