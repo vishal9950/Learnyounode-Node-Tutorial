@@ -1,11 +1,10 @@
-const filesLS = require('./6_module');
+const modular = require('./6_module');
 
-filesLS(process.argv[2], process.argv[3], (err, data) => {
-  if (err) {
-    console.log(err.code);
-    return false;
+const directory = process.argv[2];
+const extension = process.argv[3];
+modular(directory, extension, (err, data) => {
+  if (err) { console.log('error'); } else {
+    data.forEach(file => console.log(file));
   }
-  // data.forEach(element => console.log(element));
-  console.log(data.toString());
-  return true;
 });
+module.exports = modular;
