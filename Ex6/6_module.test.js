@@ -9,3 +9,9 @@ describe('Argument Validation: ', () => {
     expect(filesLS(undefined)).toBe(false);
   });
 });
+
+describe('Path Validation: ', () => {
+  test('Should not work for given path: ', () => {
+    expect(filesLS('./Exx6')).toBe(false);
+  });
+});
