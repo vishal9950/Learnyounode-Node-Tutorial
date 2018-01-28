@@ -18,6 +18,6 @@ describe('Path Validation: ', () => {
 
 describe('Funcitonality if filtered: ', () => {
   test('Should work for correct path: ', () => {
-    expect(filtered('./Ex4', '.txt')).toBe(true);
+    expect(filtered('/Users/vishalvasnani/MDL/training/learnyounode/Ex4', '.txt')).toEqual(true);
   });
 });
