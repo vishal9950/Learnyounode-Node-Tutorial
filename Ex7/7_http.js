@@ -1,10 +1,14 @@
 const http = require('http');
 
-http.get(process.argv[2], (response) => {
-  response.setEncoding('utf8');
-  response.on('data', (data) => {
-    console.log(data);
+const asyncHTTP = (url, callback) => {
+  http.get(url, (response) => {
+    console.log(process.argv[2]);
+    response.setEncoding('utf8');
+    response.on('data', (data) => {
+      console.log(data);
+      callback('data stream');
+    });
   });
-});
+};
 
-module.exports = http.get;
+module.exports = asyncHTTP;
