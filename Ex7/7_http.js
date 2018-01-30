@@ -10,14 +10,14 @@ const asyncHTTP = (url, testCallback) => {
       testCallback('data stream');
     });
 
-    // response.on('end', () => {
-    //   result.forEach(value => console.log(value));
-    //   testCallback('ERROR');
-    // });
-    //
-    // response.on('error', () => {
-    //   testCallback('ERROR');
-    // });
+    response.on('end', () => {
+      result.forEach(value => console.log(value));
+      testCallback('ERROR');
+    });
+
+    response.on('error', () => {
+      testCallback('ERROR');
+    });
   });
 };
 
