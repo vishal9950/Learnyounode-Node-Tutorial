@@ -1,13 +1,23 @@
 const http = require('http');
 
-const asyncHTTP = (url, callback) => {
+const asyncHTTP = (url, testCallback) => {
   http.get(url, (response) => {
-    console.log(process.argv[2]);
+    // console.log(process.argv[2]);
     response.setEncoding('utf8');
+    const result = [];
     response.on('data', (data) => {
-      console.log(data);
-      callback('data stream');
+      result.push(data);
+      testCallback('data stream');
     });
+
+    // response.on('end', () => {
+    //   result.forEach(value => console.log(value));
+    //   testCallback('ERROR');
+    // });
+    //
+    // response.on('error', () => {
+    //   testCallback('ERROR');
+    // });
   });
 };
 

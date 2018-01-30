@@ -8,4 +8,12 @@ describe('Funcitonality of http.get: ', () => {
     };
     asyncHTTP('http://www.google.com', callback);
   });
+
+  // test('should return error if wrong', (done) => {
+  //   const callback = (data) => {
+  //     expect(data).toBe('ERROR');
+  //     done();
+  //   };
+  //   asyncHTTP('http://httpstat.us/404', callback);
+  // });
 });
